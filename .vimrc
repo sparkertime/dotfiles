@@ -157,15 +157,13 @@ map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <silent> <C-P> :ClearCtrlPCache<cr>:CtrlP<cr>
 
 " specify files to ignore in CtrlP
 " Modifying this may require :ClearAllCtrlPCaches to take effect
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
-  \ 'file': '\.exe$\|\.so$\|\.class$',
+  \ 'file': '\.exe$\|\.so$\|\.class$\|\.*.swp$',
   \ }
 
 " Duplicate a selection
@@ -218,11 +216,17 @@ set wildmode=list:longest,list:full
 set ignorecase
 set smartcase
 
-"Switch to the next "higher" windows with <C-K>
-noremap <C-J> <C-W>j<C-W>_
+"Switch to the next "lower" window with <C-K>
+noremap <C-J> <C-W>j
 
-"Switch to the next "higher" windows with <C-J>
-noremap <C-K> <C-W>k<C-W>_
+"Switch to the next "higher" window with <C-J>
+noremap <C-K> <C-W>k
+
+"Switch to the next "right" window with <C-L>
+noremap <C-L> <C-W>l
+
+"Switch to the next "left" window with <C-H>
+noremap <C-H> <C-W>h
 
 "-------- NERDTree settings
 "Toggle NERDTree window using F3 key
