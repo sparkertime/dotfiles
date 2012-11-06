@@ -13,6 +13,7 @@ ZSH_THEME="robbyrussell"
 alias light="java -jar ~/tools/lighttable/launcher.jar"
 alias startredis="redis-server /usr/local/etc/redis.conf"
 alias vimrepl="screen -R nrepl -m lein repl"
+alias startpg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
