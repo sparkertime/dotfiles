@@ -157,8 +157,6 @@ map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-nnoremap <silent> <C-P> :ClearCtrlPCache<cr>:CtrlP<cr>
-
 " specify files to ignore in CtrlP
 " Modifying this may require :ClearAllCtrlPCaches to take effect
 let g:ctrlp_custom_ignore = {
