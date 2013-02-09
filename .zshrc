@@ -14,6 +14,7 @@ alias light="java -jar ~/tools/lighttable/launcher.jar"
 alias startredis="redis-server /usr/local/etc/redis.conf"
 alias vimrepl="screen -R nrepl -m lein repl"
 alias startpg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias startelastic="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,7 +39,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/tools
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin:$HOME/tools
 
 unsetopt correct_all
 
