@@ -47,3 +47,5 @@ unsetopt correct_all
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+TERM=screen-256color
+EDITOR=vim
