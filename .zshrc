@@ -15,6 +15,7 @@ alias startredis="redis-server /usr/local/etc/redis.conf"
 alias vimrepl="screen -R nrepl -m lein repl"
 alias startpg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias startelastic="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+alias randomfile="ruby -e \"puts Dir['*'].shuffle.first\""
 
 function pbcopy_md_as_textile() {
   OLD_FILENAME="$(basename $1)"
